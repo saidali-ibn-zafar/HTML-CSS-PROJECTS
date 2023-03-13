@@ -331,9 +331,94 @@ Hero
 
 /*
 =============== 
-
+Recipes
 ===============
 */
+.recipes-container{
+  display: grid;
+  gap: 2rem 1rem;
+}
+.tags-container{
+  order: 1;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 3rem;
+}
+.recipes-list{
+  display: grid;
+  gap: 2rem 1rem;
+  padding-bottom: 3rem;
+}
+.tags-container h4{
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+.tags-list{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.tags-list a{
+  text-transform: capitalize;
+  display: block;
+  color: var(--grey-500);
+  transition: var(--transition);
+}
+.tags-list a:hover{
+  color: var(--primary-500);
+}
+.recipe{
+  display: block;
+}
+.recipe-img{
+  height: 15rem;
+  border-radius: var(--borderRadius);
+  margin-bottom: 1rem;
+}
+.recipe h5{
+  margin-bottom: 0;
+  line-height: 1;
+  color: var(--grey-700);
+}
+.recipe p{
+  margin-bottom: 0;
+  line-height: 1;
+  margin-top: 0.5rem;
+  color: var(--grey-500);
+  letter-spacing: var(--letterSpacing);
+}
+
+@media screen and (min-width: 576px){
+  .recipes-list{
+    grid-template-columns: 1fr 1fr;
+  }
+  .recipe-img{
+    height: 10rem;
+  }
+}
+@media screen and (min-width: 992px){
+  .recipes-container{
+    grid-template-columns: 200px 1fr;
+  }
+  .recipe p{
+    font-size: 0.85rem;
+  }
+  .tags-container{
+    order: 0;
+  }
+  .tags-list{
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (min-width: 1200px){
+  .recipe h5{
+    font-size: 1.15rem;
+  }
+  .recipes-list{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  
+}
+
 
 .navbar{
   display: flex;
@@ -433,5 +518,79 @@ Hero
   }
   .contact-link{
     margin-left: auto;
+  }
+}
+
+
+/*
+=============== 
+Error
+===============
+*/
+.error-page{
+  text-align: center;
+  padding-top: 5rem;
+}
+.error-page h1{
+  font-size: 9rem;
+}
+/*
+=============== 
+About
+===============
+*/
+
+.about-page h2{
+  text-transform: none;
+  font-weight: bold;
+}
+
+.about-page{
+  display: grid;
+  gap: 2rem 4rem;
+  padding-bottom: 3rem;
+}
+.about-img{
+  border-radius: var(--borderRadius);
+  height: 300px;
+}
+
+@media screen and (min-width: 992px){
+  .about-page{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 400px;
+    align-items: center;
+  }
+  .about-img{
+    height: 100%;
+  }
+}
+
+
+.featured-title{
+  text-align: center;
+}
+
+/*
+=============== 
+Contact Page
+===============
+*/
+
+.contact-form{
+  width: 100%;
+  margin: 0;
+}
+
+.contact-container{
+  display: grid;
+  gap: 2rem 3rem;
+  padding-bottom: 3rem;
+}
+
+@media screen and (min-width: 992px){
+  .contact-container{
+    grid-template-columns: 1fr 450px;
+    align-items: center;
   }
 }
